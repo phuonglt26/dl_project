@@ -1,0 +1,33 @@
+num_epoch:
+  phase_1: 6
+  phase_2: 5
+  phase_3: 5
+  phase_4: 6
+  phase_5: 7
+  phase_6: 8
+  phase_7: 10
+  phase_8: 10
+  phase_9: 10
+  phase_10: 10
+batch_size:
+  phase_1: 32
+  phase_2: 32
+  phase_3: 32
+  phase_4: 32
+  phase_5: 32
+  phase_6: 32
+  phase_7: 32
+  phase_8: 32
+  phase_9: 32
+  phase_10: 32
+lr:
+  phase_1: 0.01
+  phase_2: 0.01
+  phase_3: 0.01
+  phase_4: 0.01
+  phase_5: 0.01
+  phase_6: 0.01
+  phase_7: 0.01
+  phase_8: 0.01
+  phase_9: 0.01
+  phase_10: 0.01
