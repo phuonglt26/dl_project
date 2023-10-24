@@ -100,9 +100,7 @@ def evaluate_model(model, data_loader):
 def train_phase():
     data_dir = "data/train_phase/"
     teacher_model = None
-    model = models.resnet18(pretrained=True)
-    # model.dropout = nn.Dropout(0)
-    model.fc = nn.Linear(model.fc.in_features, num_class)
+
     # Define the optimizer and loss function
 
     for phase_num in range(1, 11):
@@ -141,7 +139,9 @@ def train_phase():
         # Ensure shuffle = False when evaluating on validation and test
         train_loader = DataLoader(dataset, batch_size=batch_size, shuffle=False)
 
-        
+        model = models.resnet18(pretrained=True)
+        # model.dropout = nn.Dropout(0)
+        model.fc = nn.Linear(model.fc.in_features, num_class)
         model.to(device)
 
         if teacher_model:
