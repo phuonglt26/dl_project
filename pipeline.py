@@ -147,7 +147,6 @@ def train_phase():
         model = models.resnet18(pretrained=True)
         # model.dropout = nn.Dropout(0)
         model.fc = nn.Linear(model.fc.in_features, num_class)
-        teacher_model.fc = nn.Linear(model.fc.in_features, num_class)
         model.to(device)
 
         if teacher_model:
